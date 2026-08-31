@@ -1,0 +1,150 @@
+{
+  "class_id": 332,
+  "name": "Enhanced Security Control",
+  "message_types": [
+    "Get",
+    "GetNext",
+    "Set"
+  ],
+  "attributes": [
+    {
+      "index": 0,
+      "name": "Managed Entity Id",
+      "size_bytes": 2,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 1,
+      "name": "Olt Crypto Capabilities",
+      "size_bytes": 16,
+      "access": [
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 2,
+      "name": "Olt Random Challenge Table",
+      "size_bytes": 0,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": true
+    },
+    {
+      "index": 3,
+      "name": "Olt Challenge Status",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 4,
+      "name": "Onu Selected Crypto Capabilities",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 5,
+      "name": "Onu Random Challenge Table",
+      "size_bytes": 0,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": true
+    },
+    {
+      "index": 6,
+      "name": "Onu Authentication Result Table",
+      "size_bytes": 0,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": true
+    },
+    {
+      "index": 7,
+      "name": "Olt Authentication Result Table",
+      "size_bytes": 0,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": true
+    },
+    {
+      "index": 8,
+      "name": "Olt Result Status",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 9,
+      "name": "Onu Authentication Status",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 10,
+      "name": "Master Session Key Name",
+      "size_bytes": 16,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 11,
+      "name": "Broadcast Key Table",
+      "size_bytes": 0,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": true
+    },
+    {
+      "index": 12,
+      "name": "Effective Key Length",
+      "size_bytes": 2,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    }
+  ],
+  "source": {
+    "library": "github.com/opencord/omci-lib-go/v2",
+    "version": "v2.2.4"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "class_id": 414,
+  "name": "Xdsl Line Inventory And Status Data Part 8",
+  "message_types": [
+    "Get"
+  ],
+  "attributes": [
+    {
+      "index": 0,
+      "name": "Managed Entity Id",
+      "size_bytes": 2,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 1,
+      "name": "Retransmission Used Downstream Rtx Usedds",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 2,
+      "name": "Retransmission Used Upstream Rtx Usedus",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 3,
+      "name": "Date Time Stamping Of Near End Test Parameters Stamp Test Ne",
+      "size_bytes": 7,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 4,
+      "name": "Date Time Stamping Of Far End Test Parameters Stamp Test Fe",
+      "size_bytes": 7,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 5,
+      "name": "Date Time Stamping Of Last Successful Downstream Olr Operation Stamp Olr Ds",
+      "size_bytes": 7,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 6,
+      "name": "Date Time Stamping Of Last Successful Upstream Olr Operation Stamp Olr Us",
+      "size_bytes": 7,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    }
+  ],
+  "source": {
+    "library": "github.com/opencord/omci-lib-go/v2",
+    "version": "v2.2.4"
+  }
+}

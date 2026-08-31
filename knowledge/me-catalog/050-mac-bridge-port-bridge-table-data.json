@@ -1,0 +1,34 @@
+{
+  "class_id": 50,
+  "name": "Mac Bridge Port Bridge Table Data",
+  "message_types": [
+    "Get",
+    "GetNext"
+  ],
+  "attributes": [
+    {
+      "index": 0,
+      "name": "Managed Entity Id",
+      "size_bytes": 2,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 1,
+      "name": "Bridge Table",
+      "size_bytes": 0,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": true
+    }
+  ],
+  "source": {
+    "library": "github.com/opencord/omci-lib-go/v2",
+    "version": "v2.2.4"
+  }
+}

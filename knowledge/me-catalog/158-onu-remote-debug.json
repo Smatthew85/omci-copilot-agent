@@ -1,0 +1,55 @@
+{
+  "class_id": 158,
+  "name": "Onu Remote Debug",
+  "message_types": [
+    "Get",
+    "GetNext",
+    "Set"
+  ],
+  "attributes": [
+    {
+      "index": 0,
+      "name": "Managed Entity Id",
+      "size_bytes": 2,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 1,
+      "name": "Command Format",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 2,
+      "name": "Command",
+      "size_bytes": 25,
+      "access": [
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 3,
+      "name": "Reply Table",
+      "size_bytes": 0,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": true
+    }
+  ],
+  "source": {
+    "library": "github.com/opencord/omci-lib-go/v2",
+    "version": "v2.2.4"
+  }
+}
