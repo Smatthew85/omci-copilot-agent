@@ -14,6 +14,7 @@ OMCI messages and diagnose provisioning failures.
 | [`provisioning-flows/`](./provisioning-flows/) | Standard ONU OMCI provisioning sequence with ME dependencies |
 | [`examples/`](./examples/) | Golden set of anonymized OMCI failure cases with expected diagnoses (few-shot references) |
 | [`logs/`](./logs/) | VOLTHA and OLT hardware log formats — how to extract OMCI frames from pasted log output |
+| [`vendors/`](./vendors/) | Vendor-specific ONU/OLT deviations from G.988 (ME gaps, firmware quirks, workarounds) |
 
 ---
 
