@@ -32,6 +32,7 @@ Knowledge base and tooling for a GitHub Copilot AI agent that analyzes ITU-T G.9
 | [`knowledge/logs/`](knowledge/logs/README.md) | VOLTHA and OLT hardware log formats — extract OMCI frames from pasted log output |
 | [`knowledge/alarms/`](knowledge/alarms/README.md) | OMCI Alarm (MT 16) notifications — format, sync, per-ME alarm tables, interpretation recipe |
 | [`knowledge/avc/`](knowledge/avc/README.md) | OMCI Attribute Value Change (MT 17) notifications — format, common triggers, interpretation recipe |
+| [`knowledge/vendors/`](knowledge/vendors/README.md) | Vendor-specific ONU/OLT deviations from G.988 (ME gaps, firmware quirks, workarounds) |
 
 See [`knowledge/README.md`](knowledge/README.md) for the full knowledge base index.
 The [`knowledge/`](knowledge/) directory contains reference documentation that grounds the Copilot agent's OMCI analysis:

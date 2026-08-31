@@ -240,3 +240,39 @@ When the Message Type byte equals `0x11`:
   report `<ME> alarm bit N (meaning not in local catalog; consult G.988 §<clause>)`
   or `<ME> attribute N (not in local catalog)`.
 - Use the standard Summary / Root Cause / Evidence / Remediation / References structure.
+## Vendor-Specific Diagnosis
+
+### When to Consult `knowledge/vendors/`
+
+When a user's input **mentions a specific ONU vendor or model** (e.g., "Nokia G-010G",
+"ZTE F660", "Calix 844E"), the agent **MUST** consult `knowledge/vendors/<vendor>/`
+before applying generic G.988 diagnosis rules.
+
+### Lookup Procedure
+
+1. Map the mentioned vendor/model to the appropriate subfolder:
+   `adtran/`, `nokia/`, `calix/`, `huawei/`, `zte/`, or `_other/`.
+2. Scan the folder for quirk files (`NNN-*.md`) whose **ME(s) involved**, **observed
+   behavior**, or **detection** section matches the user's reported symptoms.
+3. If a matching quirk is found:
+   - **Cite the specific quirk file** (e.g., `knowledge/vendors/nokia/001-me-171-truncates-rules.md`).
+   - **Prefer the quirk's diagnosis** over generic G.988 rules for the affected ME and
+     behavior.
+   - Still complete the standard Summary/Root Cause/Evidence/Remediation/References
+     structure, but adjust it to reflect the known quirk.
+4. If no matching quirk is found:
+   - Proceed with standard G.988 diagnosis.
+   - **Note explicitly** that `knowledge/vendors/<vendor>/` was checked and no
+     matching quirk was found. This transparency helps the team identify gaps.
+
+### Guardrails
+
+- The agent **MUST NOT** invent vendor quirks. If a user reports behavior that appears
+  vendor-specific but no quirk file matches, the agent should:
+  - Diagnose using standard G.988 rules.
+  - Suggest that the team consider opening a new quirk entry using the template at
+    `knowledge/vendors/_template/quirk.md`.
+- Never claim a quirk applies unless the detection criteria in that quirk file are
+  clearly satisfied by the user's input.
+- If the vendor is mentioned but the relevant subfolder does not exist (e.g., a vendor
+  not in the index), fall back to `_other/` and note the gap.

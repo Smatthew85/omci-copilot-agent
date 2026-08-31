@@ -16,6 +16,7 @@ OMCI messages and diagnose provisioning failures.
 | [`logs/`](./logs/) | VOLTHA and OLT hardware log formats — how to extract OMCI frames from pasted log output |
 | [`alarms/`](./alarms/) | OMCI Alarm (MT 16) message format, synchronization, per-ME alarm tables, and interpretation recipe |
 | [`avc/`](./avc/) | OMCI Attribute Value Change (MT 17) message format, common triggers, and interpretation recipe |
+| [`vendors/`](./vendors/) | Vendor-specific ONU/OLT deviations from G.988 (ME gaps, firmware quirks, workarounds) |
 
 ---
 
