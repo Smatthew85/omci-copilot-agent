@@ -18,18 +18,19 @@
 # ME 171 — Extended VLAN Tagging Operation Configuration Data
 #   ME Class ID: 0x00AB (171)
 #   Attribute 7 — "Received frame VLAN tagging operation table" (16-byte rule tuples)
-#   Attribute mask bit 7 (from MSB) = 0x0100
+#   Attribute mask bit 7 (from MSB) = 0x0200 (bit 15=attr1, bit 14=attr2, ..., bit 9=attr7)
 #
 # Frame 1 — OLT->ONU: Set request (MT=8=0x08, AR=1 -> MessageType byte = 0x48)
 #   TCID=0x0002, DevID=0x0A, MEClass=0x00AB (171), MEInst=0x0001
-#   AttrMask=0x0100 (attribute 7 only)
-#   Rule bytes [12-27]: deliberately malformed — filter outer priority=0xF (reserved),
-#     VID=0xFFF (wildcard), TPID=0xEEEE (invalid), treatment outer priority=0xFF (invalid)
-#   NOTE: byte offsets are illustrative; actual G.988 encoding may vary by implementation
-000248AB00AB000101000FFFEEEEFFFFFFFF0000000000000000000000000000000000280000000000000000
+#   AttrMask=0x0200 (attribute 7; bit 14 of 16-bit mask = 2nd MSB = 0x0200)
+#   Rule bytes [10-25]: deliberately malformed — filter outer priority=0xF (reserved),
+#     TPID=0xEEEE (invalid), treatment outer priority byte=0xFF (out of range)
+#   NOTE: byte offsets follow Set frame layout (AttrMask at bytes 8-9, values at 10+)
+#   CRC placeholder: 00000000
+0002480A00AB000102000FFFEEEEFFFFFFFF000000000000000000000000000000000000000000000028000000000000
 #
 # Frame 2 — ONU->OLT: Set response (MT=8=0x08, AK=1 -> MessageType byte = 0x28)
 #   TCID=0x0002, DevID=0x0A, MEClass=0x00AB (171), MEInst=0x0001
-#   Content byte 0 = 0x03 (result code: Parameter Error)
-#   Content byte 1 = 0x00 (unsupported attribute mask — unused for this error)
-000228AB00AB000103000000000000000000000000000000000000000000000000000000002800000000
+#   Content byte 0 = 0x03 (result code: Parameter Error); remaining content zero-padded
+#   CRC placeholder: 00000000
+0002280A00AB000103000000000000000000000000000000000000000000000000000000000000000028000000000000

@@ -15,7 +15,7 @@
       "me_class_name": "Extended VLAN Tagging Operation Configuration Data",
       "me_instance_id": 1,
       "attributes": {
-        "attribute_mask": "0x0100",
+        "attribute_mask": "0x0200",
         "attributes_present": [
           {
             "index": 7,

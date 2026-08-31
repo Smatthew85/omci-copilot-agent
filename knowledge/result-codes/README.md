@@ -31,14 +31,11 @@ Request) and AK (Acknowledgement).
 
 | MT  | Hex  | Name              | Direction   | Has Response |
 |-----|------|-------------------|-------------|--------------|
-| 4   | 0x04 | Create Complete   | ONU->OLT    | No           |
-| 5   | 0x05 | Delete            | OLT->ONU    | Yes          |
-| 6   | 0x06 | Set               | OLT->ONU    | Yes          |
-| 7   | 0x07 | Get               | OLT->ONU    | Yes          |
-| 8   | 0x08 | Get All Alarms    | OLT->ONU    | Yes          |
-| 9   | 0x09 | Get All Alarms Next | OLT->ONU  | Yes          |
+| 8   | 0x08 | Set               | OLT->ONU    | Yes          |
+| 9   | 0x09 | Get               | OLT->ONU    | Yes          |
 | 10  | 0x0A | Create            | OLT->ONU    | Yes          |
 | 11  | 0x0B | Delete            | OLT->ONU    | Yes          |
+| 12  | 0x0C | Get All Alarms    | OLT->ONU    | Yes          |
 | 13  | 0x0D | MIB Upload        | OLT->ONU    | Yes          |
 | 14  | 0x0E | MIB Upload Next   | OLT->ONU    | Yes          |
 | 15  | 0x0F | MIB Reset         | OLT->ONU    | Yes          |

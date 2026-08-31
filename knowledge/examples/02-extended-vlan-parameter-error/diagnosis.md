@@ -31,7 +31,7 @@ The ONU rejects the entire Set operation before applying any changes to its MIB.
 - **Message Type**: MT=8 — Set (request byte `0x48`, response byte `0x28`)
 - **ME Class**: 171 — Extended VLAN Tagging Operation Configuration Data
 - **ME Instance**: 1
-- **Attribute Mask**: `0x0100` — attribute 7 only ("Received frame VLAN tagging
+- **Attribute Mask**: `0x0200` — attribute 7 only ("Received frame VLAN tagging
   operation table")
 - **Result Code**: `0x03` — Parameter Error (response content byte 0)
 - **Suspect bytes in rule tuple** (raw `0FFFEEEEFFFFFFFF0000000000000000`):
