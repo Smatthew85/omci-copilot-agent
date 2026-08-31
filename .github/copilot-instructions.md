@@ -198,6 +198,48 @@ Follow the end-to-end recipe in `knowledge/logs/extraction-workflow.md`:
 
 ---
 
+## Alarm and AVC Routing
+
+### Alarm Notifications (MT 16 / `0x10`)
+
+When the Message Type byte (byte 2 of an OMCI frame) equals `0x10`:
+
+1. Treat the message as an **Alarm notification** — autonomous ONU→OLT, no AR/AK.
+2. Follow the step-by-step recipe in
+   [`knowledge/alarms/interpretation-workflow.md`](../knowledge/alarms/interpretation-workflow.md).
+3. Consult [`knowledge/alarms/common-alarms.md`](../knowledge/alarms/common-alarms.md)
+   for per-ME alarm bit definitions.
+4. If a sequence-number gap is detected, refer to
+   [`knowledge/alarms/alarm-synchronization.md`](../knowledge/alarms/alarm-synchronization.md)
+   for the Get All Alarms (MT 27/28) resync procedure.
+5. Always cite **specific bit indices** (e.g., "bit 2") in addition to alarm names
+   so the operator can verify against the raw frame.
+6. If an alarm bit's meaning is not in `common-alarms.md` or the ME catalog, state
+   this explicitly — do not guess the meaning.
+
+### AVC Notifications (MT 17 / `0x11`)
+
+When the Message Type byte equals `0x11`:
+
+1. Treat the message as an **Attribute Value Change** notification — autonomous ONU→OLT,
+   no AR/AK.
+2. Follow the step-by-step recipe in
+   [`knowledge/avc/interpretation-workflow.md`](../knowledge/avc/interpretation-workflow.md).
+3. Consult [`knowledge/avc/common-avc-triggers.md`](../knowledge/avc/common-avc-triggers.md)
+   for well-known AVC-generating scenarios.
+4. Always cite **specific attribute indices** (e.g., "attribute 9") in addition to
+   attribute names so the operator can verify against the raw frame.
+5. If an attribute's meaning for a given ME is not in the local knowledge base, state
+   this explicitly — do not guess.
+
+### Output Conventions for Alarm and AVC Diagnoses
+
+- State the ME Class ID and name (e.g., "ANI-G (Class 263)").
+- State alarm bit indices and attribute indices numerically alongside their names.
+- When per-ME alarm bit or AVC attribute meaning is absent from the local catalog,
+  report `<ME> alarm bit N (meaning not in local catalog; consult G.988 §<clause>)`
+  or `<ME> attribute N (not in local catalog)`.
+- Use the standard Summary / Root Cause / Evidence / Remediation / References structure.
 ## Vendor-Specific Diagnosis
 
 ### When to Consult `knowledge/vendors/`
