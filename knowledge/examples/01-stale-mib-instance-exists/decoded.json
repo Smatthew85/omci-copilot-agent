@@ -1,0 +1,47 @@
+{
+  "frames": [
+    {
+      "direction": "OLT->ONU",
+      "tcid": "0x0001",
+      "message_type": {
+        "raw": "0x4A",
+        "ar": true,
+        "ak": false,
+        "mt": 10,
+        "mt_name": "Create"
+      },
+      "device_id": "0x0A",
+      "me_class_id": 45,
+      "me_class_name": "MAC Bridge Service Profile",
+      "me_instance_id": 1,
+      "attributes": {
+        "spanning_tree_ind": false,
+        "learning_ind": true,
+        "port_bridging_ind": false,
+        "priority": 8,
+        "max_age": 20,
+        "hello_time": 2,
+        "forward_delay": 15,
+        "unknown_mac_address_discard": false
+      },
+      "result_code": null
+    },
+    {
+      "direction": "ONU->OLT",
+      "tcid": "0x0001",
+      "message_type": {
+        "raw": "0x2A",
+        "ar": false,
+        "ak": true,
+        "mt": 10,
+        "mt_name": "Create"
+      },
+      "device_id": "0x0A",
+      "me_class_id": 45,
+      "me_class_name": "MAC Bridge Service Profile",
+      "me_instance_id": 1,
+      "attributes": {},
+      "result_code": "0x07"
+    }
+  ]
+}

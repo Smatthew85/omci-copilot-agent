@@ -1,0 +1,16 @@
+# One OMCI frame per line as continuous hex (no spaces, no 0x prefix).
+# Lines starting with # are comments. Blank lines are ignored.
+# Byte order: network (big-endian) throughout.
+#
+# Baseline frame layout (48 bytes total):
+#   Bytes  0- 1  TCID (Transaction Correlation ID)
+#   Byte   2     Message Type (AR|AK bits + MT field)
+#   Byte   3     Device Identifier (0x0A = baseline OMCI)
+#   Bytes  4- 5  ME Class ID
+#   Bytes  6- 7  ME Instance ID
+#   Bytes  8-39  Content (32 bytes, zero-padded)
+#   Bytes 40-43  OMCI Trailer (2-byte length 0x0028 + 2-byte MIC placeholder)
+#   Bytes 44-47  CRC-32 (NOTE: placeholder 00000000 when fabricated)
+#
+# Example — Create MAC Bridge Service Profile request (MT=10 / 0x0A):
+# 00014A0A002D000100000000000000000000000000000000000000000000000000000000000000000000002800000000
