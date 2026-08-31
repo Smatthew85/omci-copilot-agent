@@ -1,0 +1,100 @@
+name: Sync ME Catalog
+
+on:
+  schedule:
+    # Every Monday at 06:00 UTC
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+concurrency:
+  group: sync-me-catalog
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
+      # TODO: Update this step once the extractor script is added to the
+      # repository.  The README references a script that extracts the ME
+      # catalog from opencord/omci-lib-go into knowledge/me-catalog/.
+      # Replace the placeholder command below with the real invocation, e.g.:
+      #   go run ./cmd/extract-me-catalog
+      # or:
+      #   ./scripts/extract-me-catalog.sh
+      # Once the extractor is in place, remove `continue-on-error` below.
+      - name: Run ME catalog extractor
+        continue-on-error: true
+        id: extractor
+        run: |
+          echo "TODO: extractor script not yet present in this repository."
+          echo "Add the extractor and update this step with its invocation."
+          echo "Expected output directory: knowledge/me-catalog/"
+          exit 1
+
+      - name: Detect changes in ME catalog
+        id: detect
+        run: |
+          changes=$(git status --porcelain knowledge/me-catalog/)
+          if [ -n "$changes" ]; then
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+            echo "Changed files:"
+            echo "$changes"
+          else
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+            echo "ME catalog is up to date."
+          fi
+
+      - name: Build PR body
+        if: steps.detect.outputs.has_changes == 'true'
+        id: pr_body
+        run: |
+          changed_files=$(git status --porcelain knowledge/me-catalog/)
+          {
+            echo 'body<<BODYEOF'
+            echo "## ME Catalog Sync"
+            echo ""
+            echo "This PR was generated automatically by the [Sync ME Catalog](${{ github.server_url }}/${{ github.repository }}/actions/workflows/sync-me-catalog.yml) workflow."
+            echo ""
+            echo "### Changed files"
+            echo ""
+            echo '```'
+            echo "$changed_files"
+            echo '```'
+            echo ""
+            echo "### Upstream source"
+            echo ""
+            echo "Changes sourced from [opencord/omci-lib-go](https://github.com/opencord/omci-lib-go)."
+            echo ""
+            echo "Please review the diff and merge if the changes look correct."
+            echo 'BODYEOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Open pull request
+        if: steps.detect.outputs.has_changes == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: chore/sync-me-catalog-${{ github.run_id }}
+          commit-message: 'chore: sync ME catalog from opencord/omci-lib-go'
+          title: 'chore: sync ME catalog from opencord/omci-lib-go'
+          body: ${{ steps.pr_body.outputs.body }}
+          labels: |
+            automation
+            me-catalog
+
+      - name: No changes
+        if: steps.detect.outputs.has_changes == 'false'
+        run: echo "ME catalog is up to date — no PR needed."
