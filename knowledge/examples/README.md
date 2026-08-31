@@ -14,8 +14,8 @@ diagnoses. These serve two purposes:
 
 | # | Slug | ME Class | Result Code | Summary |
 |---|------|----------|-------------|---------|
-| 01 | [stale-mib-instance-exists](./01-stale-mib-instance-exists/) | 45 — MAC Bridge Service Profile | 0x07 Instance Exists | Create rejected because prior provisioning attempt left stale MIB state |
-| 02 | [extended-vlan-parameter-error](./02-extended-vlan-parameter-error/) | 171 — Extended VLAN Tagging Op Config Data | 0x03 Parameter Error | Set rejected due to malformed 16-byte VLAN rule tuple |
+| 01 | [stale-mib-instance-exists](./01-stale-mib-instance-exists/) | 45 — MAC Bridge Service Profile | 0x07 Instance Exists | Create rejected because prior provisioning attempt left stale MIB state on the ONU. |
+| 02 | [extended-vlan-parameter-error](./02-extended-vlan-parameter-error/) | 171 — Extended VLAN Tagging Op Config Data | 0x03 Parameter Error | Set rejected due to malformed 16-byte VLAN rule tuple. |
 
 ---
 
@@ -34,10 +34,12 @@ Example: `01-stale-mib-instance-exists/`
 
 | File | Required | Description |
 |------|----------|-------------|
-| `input.hex` | ✅ | Raw OMCI frame(s), one per line as continuous hex. Lines starting with `#` are comments; blank lines are ignored. |
+| `input.txt` | ✅ | Raw OMCI frame(s), one per line as continuous hex. Lines starting with `#` are comments; blank lines are ignored. |
 | `decoded.json` | ✅ | Structured decoded fields: TCID, MT, ME Class/Instance, attributes, result code. |
 | `diagnosis.md` | ✅ | Expected agent output: Summary, Root Cause, Evidence, Remediation, References. |
 | `context.md` | Optional | Surrounding provisioning sequence, VOLTHA log excerpts, vendor/environment info. |
+
+> **Note:** `input.txt` contains hex frames as text. The `.txt` extension is used (rather than `.hex`) so that Copilot Spaces accepts the file.
 
 ---
 
