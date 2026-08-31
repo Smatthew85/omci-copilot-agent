@@ -9,6 +9,7 @@ Knowledge base and tooling for a GitHub Copilot AI agent that analyzes ITU-T G.9
 | [`knowledge/failure-patterns/`](knowledge/failure-patterns/README.md) | Symptom → root cause → remediation table |
 | [`knowledge/provisioning-flows/`](knowledge/provisioning-flows/standard-onu-provisioning.md) | Standard ONU OMCI provisioning sequence |
 | [`knowledge/examples/`](knowledge/examples/README.md) | Golden set of annotated OMCI failure cases for few-shot diagnosis |
+| [`knowledge/logs/`](knowledge/logs/README.md) | VOLTHA and OLT hardware log formats — extract OMCI frames from pasted log output |
 
 See [`knowledge/README.md`](knowledge/README.md) for the full knowledge base index.
 The [`knowledge/`](knowledge/) directory contains reference documentation that grounds the Copilot agent's OMCI analysis:

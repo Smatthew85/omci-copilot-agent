@@ -142,3 +142,49 @@ Follow these steps in order when diagnosing an OMCI message or provisioning fail
 - **Do not invent** vendor-specific extensions unless the user explicitly provides vendor documentation. Note where vendor-specific behavior may apply without speculating.
 - If the ME catalog JSON file for a given ME class is missing, state that the file is absent and describe what it should contain based on G.988.
 - When input is a raw hex frame and decoding is ambiguous, state the ambiguity and ask the user to confirm the frame format (baseline vs. extended OMCI).
+
+---
+
+## Handling VOLTHA and OLT Hardware Log Pastes
+
+### Detection
+
+When the user's input contains **structured JSON log fields** — specifically any of
+`"logger"`, `"device-id"`, `"ts"`, or `"msg"` — treat the input as a **VOLTHA log
+paste** rather than pre-cleaned hex. Consult `knowledge/logs/` for extraction rules
+before attempting decoding.
+
+When the input contains **syslog-style text lines** with prefixes such as `OMCI:`,
+`OMCI TX:`, `OMCI RX:`, or `PON OMCI Msg:`, treat it as a **BAL / OpenOLT agent
+log**. Consult `knowledge/logs/bal-openolt-agent.md`.
+
+If the format is unrecognized, **ask the user to confirm the log source** (openonu-adapter,
+openolt-adapter, or OLT hardware) rather than guessing.
+
+### Extraction First
+
+**Always report the extracted hex frame(s) explicitly before decoding**, so the
+user can verify that extraction was correct. Use a table showing the frame index,
+timestamp, direction (TX/RX), TCID, and the full hex string.
+
+### Extraction Workflow
+
+Follow the end-to-end recipe in `knowledge/logs/extraction-workflow.md`:
+
+1. Detect log source (openonu-adapter, openolt-adapter, or BAL).
+2. Scan for OMCI carrier fields in priority order.
+3. Extract and validate hex (96 chars → baseline; longer → check for extended marker).
+4. Group frames by `device-id` (VOLTHA) or `PON[x] ONU[y]` (BAL).
+5. Order chronologically by timestamp.
+6. Correlate TX/RX pairs by TCID (first 4 hex chars).
+7. Pass each frame to the appropriate decoder.
+8. Produce a diagnosis using the standard Summary/Root Cause/Evidence/Remediation/References structure.
+
+### Reference Documents
+
+| Document | When to Use |
+|---|---|
+| [`knowledge/logs/voltha-openonu-adapter.md`](../knowledge/logs/voltha-openonu-adapter.md) | Input is JSON with `logger` = `omci-cc`, `MibDownloadFsm`, etc. |
+| [`knowledge/logs/voltha-openolt-adapter.md`](../knowledge/logs/voltha-openolt-adapter.md) | Input is JSON with `logger` = `openolt`, `flowMgr`, etc. |
+| [`knowledge/logs/bal-openolt-agent.md`](../knowledge/logs/bal-openolt-agent.md) | Input is syslog-style text with `OMCI:` prefix |
+| [`knowledge/logs/extraction-workflow.md`](../knowledge/logs/extraction-workflow.md) | Full end-to-end extraction and decoding recipe |
