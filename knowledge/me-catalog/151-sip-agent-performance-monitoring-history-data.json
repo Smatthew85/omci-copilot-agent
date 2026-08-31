@@ -1,0 +1,180 @@
+{
+  "class_id": 151,
+  "name": "Sip Agent Performance Monitoring History Data",
+  "message_types": [
+    "Create",
+    "Delete",
+    "Get",
+    "GetCurrentData",
+    "Set"
+  ],
+  "attributes": [
+    {
+      "index": 0,
+      "name": "Managed Entity Id",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 1,
+      "name": "Interval End Time",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 2,
+      "name": "Threshold Data 12 Id",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 3,
+      "name": "Transactions",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 4,
+      "name": "Rx Invite Reqs",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 5,
+      "name": "Rx Invite Retrans",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 6,
+      "name": "Rx Noninvite Reqs",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 7,
+      "name": "Rx Noninvite Retrans",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 8,
+      "name": "Rx Response",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 9,
+      "name": "Rx Response Retransmissions",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 10,
+      "name": "Tx Invite Reqs",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 11,
+      "name": "Tx Invite Retrans",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 12,
+      "name": "Tx Noninvite Reqs",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 13,
+      "name": "Tx Noninvite Retrans",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 14,
+      "name": "Tx Response",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 15,
+      "name": "Tx Response Retransmissions",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    }
+  ],
+  "source": {
+    "library": "github.com/opencord/omci-lib-go/v2",
+    "version": "v2.2.4"
+  }
+}

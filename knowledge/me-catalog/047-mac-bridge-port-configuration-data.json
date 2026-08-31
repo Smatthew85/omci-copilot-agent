@@ -1,0 +1,191 @@
+{
+  "class_id": 47,
+  "name": "Mac Bridge Port Configuration Data",
+  "message_types": [
+    "Create",
+    "Delete",
+    "Get",
+    "Set"
+  ],
+  "attributes": [
+    {
+      "index": 0,
+      "name": "Managed Entity Id",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 1,
+      "name": "Bridge Id Pointer",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 2,
+      "name": "Port Num",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 3,
+      "name": "Tp Type",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 4,
+      "name": "Tp Pointer",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 5,
+      "name": "Port Priority",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 6,
+      "name": "Port Path Cost",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 7,
+      "name": "Port Spanning Tree Ind",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 8,
+      "name": "Deprecated 1",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 9,
+      "name": "Deprecated 2",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 10,
+      "name": "Port Mac Address",
+      "size_bytes": 6,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 11,
+      "name": "Outbound Td Pointer",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 12,
+      "name": "Inbound Td Pointer",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 13,
+      "name": "Mac Learning Depth",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 14,
+      "name": "Lasp Id Pointer",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": false,
+      "table": false
+    }
+  ],
+  "source": {
+    "library": "github.com/opencord/omci-lib-go/v2",
+    "version": "v2.2.4"
+  }
+}

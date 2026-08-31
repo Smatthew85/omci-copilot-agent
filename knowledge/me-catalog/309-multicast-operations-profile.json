@@ -1,0 +1,215 @@
+{
+  "class_id": 309,
+  "name": "Multicast Operations Profile",
+  "message_types": [
+    "Create",
+    "Delete",
+    "Get",
+    "GetNext",
+    "Set",
+    "SetTable"
+  ],
+  "attributes": [
+    {
+      "index": 0,
+      "name": "Managed Entity Id",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 1,
+      "name": "Igmp Version",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 2,
+      "name": "Igmp Function",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 3,
+      "name": "Immediate Leave",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 4,
+      "name": "Upstream Igmp Tci",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 5,
+      "name": "Upstream Igmp Tag Control",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 6,
+      "name": "Upstream Igmp Rate",
+      "size_bytes": 4,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 7,
+      "name": "Dynamic Access Control List Table",
+      "size_bytes": 0,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": true
+    },
+    {
+      "index": 8,
+      "name": "Static Access Control List Table",
+      "size_bytes": 0,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": true
+    },
+    {
+      "index": 9,
+      "name": "Lost Groups List Table",
+      "size_bytes": 0,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": true
+    },
+    {
+      "index": 10,
+      "name": "Robustness",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 11,
+      "name": "Querier Ip Address",
+      "size_bytes": 4,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 12,
+      "name": "Query Interval",
+      "size_bytes": 4,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 13,
+      "name": "Query Max Response Time",
+      "size_bytes": 4,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 14,
+      "name": "Last Member Query Interval",
+      "size_bytes": 4,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 15,
+      "name": "Unauthorized Join Request Behaviour",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 16,
+      "name": "Downstream Igmp And Multicast Tci",
+      "size_bytes": 3,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": false,
+      "table": false
+    }
+  ],
+  "source": {
+    "library": "github.com/opencord/omci-lib-go/v2",
+    "version": "v2.2.4"
+  }
+}

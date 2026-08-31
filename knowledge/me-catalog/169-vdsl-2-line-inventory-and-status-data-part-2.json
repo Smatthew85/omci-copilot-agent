@@ -1,0 +1,164 @@
+{
+  "class_id": 169,
+  "name": "Vdsl 2 Line Inventory And Status Data Part 2",
+  "message_types": [
+    "Get",
+    "GetNext"
+  ],
+  "attributes": [
+    {
+      "index": 0,
+      "name": "Managed Entity Id",
+      "size_bytes": 2,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 1,
+      "name": "Vdsl 2 Transmission System Capability Xtu R",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 2,
+      "name": "Actsnrmodeus",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 3,
+      "name": "Upbokle",
+      "size_bytes": 2,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 4,
+      "name": "Hlingus",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 5,
+      "name": "Hloggus",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 6,
+      "name": "Qlngus",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 7,
+      "name": "Snrgus",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 8,
+      "name": "Mrefpsdus Table",
+      "size_bytes": 0,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": true
+    },
+    {
+      "index": 9,
+      "name": "Trellisus",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 10,
+      "name": "Actualce",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 11,
+      "name": "Upbokle R",
+      "size_bytes": 2,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 12,
+      "name": "Actual Rate Adaptation Mode Upstream",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 13,
+      "name": "Actual Impulse Noise Protection Roc Upstream",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 14,
+      "name": "Snr Margin Roc Upstream",
+      "size_bytes": 2,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    }
+  ],
+  "source": {
+    "library": "github.com/opencord/omci-lib-go/v2",
+    "version": "v2.2.4"
+  }
+}

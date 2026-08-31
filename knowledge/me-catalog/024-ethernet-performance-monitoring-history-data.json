@@ -1,0 +1,190 @@
+{
+  "class_id": 24,
+  "name": "Ethernet Performance Monitoring History Data",
+  "message_types": [
+    "Create",
+    "Delete",
+    "Get",
+    "GetCurrentData",
+    "Set"
+  ],
+  "attributes": [
+    {
+      "index": 0,
+      "name": "Managed Entity Id",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 1,
+      "name": "Interval End Time",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 2,
+      "name": "Threshold Data 12 Id",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 3,
+      "name": "Fcs Errors",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 4,
+      "name": "Excessive Collision Counter",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 5,
+      "name": "Late Collision Counter",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 6,
+      "name": "Frames Too Long",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 7,
+      "name": "Buffer Overflows On Receive",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 8,
+      "name": "Buffer Overflows On Transmit",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 9,
+      "name": "Single Collision Frame Counter",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 10,
+      "name": "Multiple Collisions Frame Counter",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 11,
+      "name": "Sqe Counter",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 12,
+      "name": "Deferred Transmission Counter",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 13,
+      "name": "Internal Mac Transmit Error Counter",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 14,
+      "name": "Carrier Sense Error Counter",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 15,
+      "name": "Alignment Error Counter",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 16,
+      "name": "Internal Mac Receive Error Counter",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    }
+  ],
+  "source": {
+    "library": "github.com/opencord/omci-lib-go/v2",
+    "version": "v2.2.4"
+  }
+}

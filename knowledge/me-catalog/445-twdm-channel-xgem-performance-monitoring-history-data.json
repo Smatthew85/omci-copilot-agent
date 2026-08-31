@@ -1,0 +1,130 @@
+{
+  "class_id": 445,
+  "name": "Twdm Channel Xgem Performance Monitoring History Data",
+  "message_types": [
+    "Create",
+    "Delete",
+    "Get",
+    "GetCurrentData",
+    "Set"
+  ],
+  "attributes": [
+    {
+      "index": 0,
+      "name": "Managed Entity Id",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 1,
+      "name": "Interval End Time",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 2,
+      "name": "Threshold Data 64 Bit Id",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 3,
+      "name": "Total Transmitted Xgem Frames",
+      "size_bytes": 8,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 4,
+      "name": "Transmitted Xgem Frames With Lf Bit Not Set",
+      "size_bytes": 8,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 5,
+      "name": "Total Received Xgem Frames",
+      "size_bytes": 8,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 6,
+      "name": "Received Xgem Frames With Xgem Header Hec Errors",
+      "size_bytes": 8,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 7,
+      "name": "Fs Words Lost To Xgem Header Hec Errors",
+      "size_bytes": 8,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 8,
+      "name": "Xgem Encryption Key Errors",
+      "size_bytes": 8,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 9,
+      "name": "Total Transmitted Bytes In Non Idle Xgem Frames",
+      "size_bytes": 8,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 10,
+      "name": "Total Received Bytes In Non Idle Xgem Frames",
+      "size_bytes": 8,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    }
+  ],
+  "source": {
+    "library": "github.com/opencord/omci-lib-go/v2",
+    "version": "v2.2.4"
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "class_id": 157,
+  "name": "Large String",
+  "message_types": [
+    "Create",
+    "Delete",
+    "Get",
+    "Set"
+  ],
+  "attributes": [
+    {
+      "index": 0,
+      "name": "Managed Entity Id",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 1,
+      "name": "Number Of Parts",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 2,
+      "name": "Part 1",
+      "size_bytes": 25,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 3,
+      "name": "Part 2",
+      "size_bytes": 25,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 4,
+      "name": "Part 3",
+      "size_bytes": 25,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 5,
+      "name": "Part 4",
+      "size_bytes": 25,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 6,
+      "name": "Part 5",
+      "size_bytes": 25,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 7,
+      "name": "Part 6",
+      "size_bytes": 25,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 8,
+      "name": "Part 7",
+      "size_bytes": 25,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 9,
+      "name": "Part 8",
+      "size_bytes": 25,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 10,
+      "name": "Part 9",
+      "size_bytes": 25,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 11,
+      "name": "Part 10",
+      "size_bytes": 25,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 12,
+      "name": "Part 11",
+      "size_bytes": 25,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 13,
+      "name": "Part 12",
+      "size_bytes": 25,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 14,
+      "name": "Part 13",
+      "size_bytes": 25,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 15,
+      "name": "Part 14",
+      "size_bytes": 25,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 16,
+      "name": "Part 15",
+      "size_bytes": 25,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    }
+  ],
+  "source": {
+    "library": "github.com/opencord/omci-lib-go/v2",
+    "version": "v2.2.4"
+  }
+}

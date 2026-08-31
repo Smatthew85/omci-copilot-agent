@@ -1,0 +1,163 @@
+{
+  "class_id": 170,
+  "name": "Vdsl 2 Line Inventory And Status Data Part 3",
+  "message_types": [
+    "Get"
+  ],
+  "attributes": [
+    {
+      "index": 0,
+      "name": "Managed Entity Id",
+      "size_bytes": 2,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 1,
+      "name": "Upstream Bands Count",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 2,
+      "name": "Downstream Bands Count",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 3,
+      "name": "Downstream Line Attenuation Per Band",
+      "size_bytes": 3,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 4,
+      "name": "Upstream Line Attenuation Per Band",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 5,
+      "name": "Downstream Signal Attenuation Per Band",
+      "size_bytes": 3,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 6,
+      "name": "Upstream Signal Attenuation Per Band",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 7,
+      "name": "Downstream Snr Margin Per Band",
+      "size_bytes": 3,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 8,
+      "name": "Upstream Snr Margin Per Band",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 9,
+      "name": "Downstream Line Attenuation Extension",
+      "size_bytes": 2,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 10,
+      "name": "Upstream Line Attenuation Extension",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 11,
+      "name": "Downstream Signal Attenuation Extension",
+      "size_bytes": 2,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 12,
+      "name": "Upstream Signal Attenuation Extension",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 13,
+      "name": "Downstream Snr Margin Extension",
+      "size_bytes": 2,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 14,
+      "name": "Upstream Snr Margin Extension",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    }
+  ],
+  "source": {
+    "library": "github.com/opencord/omci-lib-go/v2",
+    "version": "v2.2.4"
+  }
+}

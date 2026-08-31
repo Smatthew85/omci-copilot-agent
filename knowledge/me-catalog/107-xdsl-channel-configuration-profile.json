@@ -1,0 +1,202 @@
+{
+  "class_id": 107,
+  "name": "Xdsl Channel Configuration Profile",
+  "message_types": [
+    "Create",
+    "Delete",
+    "Get",
+    "Set"
+  ],
+  "attributes": [
+    {
+      "index": 0,
+      "name": "Managed Entity Id",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 1,
+      "name": "Minimum Data Rate",
+      "size_bytes": 4,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 2,
+      "name": "Maximum Data Rate",
+      "size_bytes": 4,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 3,
+      "name": "Rate Adaptation Ratio",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 4,
+      "name": "Maximum Interleaving Delay",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 5,
+      "name": "Data Rate Threshold Upshift",
+      "size_bytes": 4,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 6,
+      "name": "Data Rate Threshold Downshift",
+      "size_bytes": 4,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 7,
+      "name": "Minimum Reserved Data Rate",
+      "size_bytes": 4,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 8,
+      "name": "Minimum Data Rate In Low Power State",
+      "size_bytes": 4,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 9,
+      "name": "Minimum Impulse Noise Protection",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 10,
+      "name": "Maximum Bit Error Ratio",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 11,
+      "name": "Minimum Impulse Noise Protection 8 Khz",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 12,
+      "name": "Maximum Delay Variation",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 13,
+      "name": "Channel Initialization Policy Selection",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 14,
+      "name": "Minimum Sos Bit Rate Downstream",
+      "size_bytes": 4,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 15,
+      "name": "Minimum Sos Bit Rate Upstream",
+      "size_bytes": 4,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    }
+  ],
+  "source": {
+    "library": "github.com/opencord/omci-lib-go/v2",
+    "version": "v2.2.4"
+  }
+}

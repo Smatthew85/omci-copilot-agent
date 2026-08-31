@@ -1,0 +1,207 @@
+{
+  "class_id": 106,
+  "name": "Xdsl Line Configuration Profile Part 3",
+  "message_types": [
+    "Create",
+    "Delete",
+    "Get",
+    "Set"
+  ],
+  "attributes": [
+    {
+      "index": 0,
+      "name": "Managed Entity Id",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 1,
+      "name": "Loop Diagnostics Mode Forced Ldsf",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 2,
+      "name": "Automode Cold Start Forced",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 3,
+      "name": "L 2 Atpr",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 4,
+      "name": "L 2 Atprt",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 5,
+      "name": "Force Inp Downstream",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 6,
+      "name": "Force Inp Upstream",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 7,
+      "name": "Update Request Flag For Near End Test Parameters",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 8,
+      "name": "Update Request Flag For Far End Test Parameters",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 9,
+      "name": "Inm Inter Arrival Time Offset Upstream",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 10,
+      "name": "Inm Inter Arrival Time Step Upstream",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 11,
+      "name": "Inm Cluster Continuation Value Upstream",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 12,
+      "name": "Inm Equivalent Inp Mode Upstream",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 13,
+      "name": "Inm Inter Arrival Time Offset Downstream",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 14,
+      "name": "Inm Inter Arrival Time Step Downstream",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 15,
+      "name": "Inm Cluster Continuation Value Downstream",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 16,
+      "name": "Inm Equivalent Inp Mode Downstream",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    }
+  ],
+  "source": {
+    "library": "github.com/opencord/omci-lib-go/v2",
+    "version": "v2.2.4"
+  }
+}

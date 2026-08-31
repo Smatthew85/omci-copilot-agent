@@ -1,0 +1,123 @@
+{
+  "class_id": 441,
+  "name": "Onu 3 G",
+  "message_types": [
+    "Get"
+  ],
+  "attributes": [
+    {
+      "index": 0,
+      "name": "Managed Entity Id",
+      "size_bytes": 2,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 1,
+      "name": "Flash Memory Performance Value",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 2,
+      "name": "Latest Restart Reason",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 3,
+      "name": "Total Number Of Status Snapshots",
+      "size_bytes": 2,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 4,
+      "name": "Number Of Valid Status Snapshots",
+      "size_bytes": 2,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 5,
+      "name": "Next Status Snapshot Index",
+      "size_bytes": 2,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 6,
+      "name": "Status Snapshot Record Table",
+      "size_bytes": 25,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 7,
+      "name": "Snap Action",
+      "size_bytes": 1,
+      "access": [
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 8,
+      "name": "Most Recent Status Snapshot",
+      "size_bytes": 25,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 9,
+      "name": "Reset Action",
+      "size_bytes": 1,
+      "access": [
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 10,
+      "name": "Enhanced Mode",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    }
+  ],
+  "source": {
+    "library": "github.com/opencord/omci-lib-go/v2",
+    "version": "v2.2.4"
+  }
+}

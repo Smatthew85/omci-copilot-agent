@@ -1,0 +1,190 @@
+{
+  "class_id": 345,
+  "name": "Xg Pon Downstream Management Performance Monitoring History Data",
+  "message_types": [
+    "Create",
+    "Delete",
+    "Get",
+    "GetCurrentData",
+    "Set"
+  ],
+  "attributes": [
+    {
+      "index": 0,
+      "name": "Managed Entity Id",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 1,
+      "name": "Interval End Time",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 2,
+      "name": "Threshold Data 12 Id",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 3,
+      "name": "Ploam Message Integrity Check Mic Error Count",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 4,
+      "name": "Downstream Ploam Messages Count",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 5,
+      "name": "Profile Messages Received",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 6,
+      "name": "Ranging Time Messages Received",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 7,
+      "name": "Deactivate Onu Id Messages Received",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 8,
+      "name": "Disable Serial Number Messages Received",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 9,
+      "name": "Request Registration Messages Received",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 10,
+      "name": "Assign Alloc Id Messages Received",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 11,
+      "name": "Key Control Messages Received",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 12,
+      "name": "Sleep Allow Messages Received",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 13,
+      "name": "Baseline Omci Messages Received Count",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 14,
+      "name": "Extended Omci Messages Received Count",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 15,
+      "name": "Assign Onu Id Messages Received",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 16,
+      "name": "Omci Mic Error Count",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    }
+  ],
+  "source": {
+    "library": "github.com/opencord/omci-lib-go/v2",
+    "version": "v2.2.4"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "class_id": 138,
+  "name": "Voip Config Data",
+  "message_types": [
+    "Get",
+    "Set"
+  ],
+  "attributes": [
+    {
+      "index": 0,
+      "name": "Managed Entity Id",
+      "size_bytes": 2,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 1,
+      "name": "Available Signalling Protocols",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 2,
+      "name": "Signalling Protocol Used",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 3,
+      "name": "Available Voip Configuration Methods",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 4,
+      "name": "Voip Configuration Method Used",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 5,
+      "name": "Voip Configuration Address Pointer",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 6,
+      "name": "Voip Configuration State",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 7,
+      "name": "Retrieve Profile",
+      "size_bytes": 1,
+      "access": [
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 8,
+      "name": "Profile Version",
+      "size_bytes": 25,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    }
+  ],
+  "source": {
+    "library": "github.com/opencord/omci-lib-go/v2",
+    "version": "v2.2.4"
+  }
+}

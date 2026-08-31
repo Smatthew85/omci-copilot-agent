@@ -1,0 +1,183 @@
+{
+  "class_id": 415,
+  "name": "Vdsl 2 Line Inventory And Status Data Part 4",
+  "message_types": [
+    "Get"
+  ],
+  "attributes": [
+    {
+      "index": 0,
+      "name": "Managed Entity Id",
+      "size_bytes": 2,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 1,
+      "name": "Vtu O Estimated Upstream Power Back Off Electrical Length Per Band Upbokle Pb",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 2,
+      "name": "Vtu R Estimated Upstream Power Back Off Electrical Length Per Band Upbokle R Pb",
+      "size_bytes": 3,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 3,
+      "name": "Upbo Downstream Receiver Signal Level Threshold Rxthrshds",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 4,
+      "name": "Upbo Upstream Receiver Signal Level Threshold Rxthrshus",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 5,
+      "name": "Actual Alternative Electrical Length Estimation Mod E Act Aele Mode",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 6,
+      "name": "Actual Downstream Ripolicy Actripolicyds",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 7,
+      "name": "Actual Upstream Ripolicy Actripolicyus",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 8,
+      "name": "Attndr Actual M Ethod Attndr Actmethod",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 9,
+      "name": "Attndr Downstream A Ctual Impulse Noise Protection Attndr Actinpds",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 10,
+      "name": "Attndr Upstream A Ctual Impulse Noise Protection Attndr Actinpus",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 11,
+      "name": "Attndr Downstream A Ctual Impulse Noise Protection Against Rein Attndr Actinp Reinds",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 12,
+      "name": "Attndr Upstream A Ctual Impulse Noise Protection Against Rein Attndr Actinp Reinus",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 13,
+      "name": "Attndr Downstream Actual Delay Attndr Actdelayds",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 14,
+      "name": "Attndr Upstream A Ctual Delay Attndr Actdelayus",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 15,
+      "name": "Near End A Ggregate Achievable Net Data Rate Aggachndr Ne",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 16,
+      "name": "Far End Aggregate Achievable Net Data Rate Aggachndr Fe",
+      "size_bytes": 4,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    }
+  ],
+  "source": {
+    "library": "github.com/opencord/omci-lib-go/v2",
+    "version": "v2.2.4"
+  }
+}

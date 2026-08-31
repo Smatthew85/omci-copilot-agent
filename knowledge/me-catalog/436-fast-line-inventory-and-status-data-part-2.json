@@ -1,0 +1,73 @@
+{
+  "class_id": 436,
+  "name": "Fast Line Inventory And Status Data Part 2",
+  "message_types": [
+    "Get"
+  ],
+  "attributes": [
+    {
+      "index": 0,
+      "name": "Managed Entity Id",
+      "size_bytes": 2,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 1,
+      "name": "Date Time Stamping Of Last Successful Downstream Fra Operation Stamp Frads",
+      "size_bytes": 7,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 2,
+      "name": "Date Time Stamping Of Last Successful Upstream Fra Operation Stamp Fraus",
+      "size_bytes": 7,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 3,
+      "name": "Date Time Stamping Of Last Successful Downstream Rpa Operation Stamp Rpads",
+      "size_bytes": 7,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 4,
+      "name": "Date Time Stamping Of Last Successful Upstream Rpa Operation Stamp Rpaus",
+      "size_bytes": 7,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 5,
+      "name": "Date Time Stamping Of Last Successful Downstream Tiga Operation Stamp Tiga",
+      "size_bytes": 7,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    }
+  ],
+  "source": {
+    "library": "github.com/opencord/omci-lib-go/v2",
+    "version": "v2.2.4"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "class_id": 413,
+  "name": "Xtu Data Gathering Configuration",
+  "message_types": [
+    "Create",
+    "Delete",
+    "Get",
+    "GetNext",
+    "Set",
+    "SetTable"
+  ],
+  "attributes": [
+    {
+      "index": 0,
+      "name": "Managed Entity Id",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 1,
+      "name": "Logging Depth Event Percentage Per Event Vtu O Logging Depth Event Percentage Oi Table",
+      "size_bytes": 0,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": true
+    },
+    {
+      "index": 2,
+      "name": "Logging Depth Event Percentage Per Event Vtu R Logging Depth Event Percentage Ri Table",
+      "size_bytes": 0,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": true
+    },
+    {
+      "index": 3,
+      "name": "Logging Depth For Vtu O Reporting Vtu R Logging Depth Reporting O",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 4,
+      "name": "Logging Depth For Vtu R Reporting Vtu R Logging Depth Reporting R",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 5,
+      "name": "Logging Data Report Newer Events First Vtu R Logging Report Newer First",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    }
+  ],
+  "source": {
+    "library": "github.com/opencord/omci-lib-go/v2",
+    "version": "v2.2.4"
+  }
+}

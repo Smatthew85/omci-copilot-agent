@@ -1,0 +1,193 @@
+{
+  "class_id": 58,
+  "name": "Voice Service Profile",
+  "message_types": [
+    "Create",
+    "Delete",
+    "Get",
+    "GetNext",
+    "Set",
+    "SetTable"
+  ],
+  "attributes": [
+    {
+      "index": 0,
+      "name": "Managed Entity Id",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 1,
+      "name": "Announcement Type",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 2,
+      "name": "Jitter Target",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 3,
+      "name": "Jitter Buffer Max",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 4,
+      "name": "Echo Cancel Ind",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 5,
+      "name": "Pstn Protocol Variant",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 6,
+      "name": "Dtmf Digit Levels",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 7,
+      "name": "Dtmf Digit Duration",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 8,
+      "name": "Hook Flash Minimum Time",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 9,
+      "name": "Hook Flash Maximum Time",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 10,
+      "name": "Tone Pattern Table",
+      "size_bytes": 0,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": true
+    },
+    {
+      "index": 11,
+      "name": "Tone Event Table",
+      "size_bytes": 0,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": true
+    },
+    {
+      "index": 12,
+      "name": "Ringing Pattern Table",
+      "size_bytes": 0,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": true
+    },
+    {
+      "index": 13,
+      "name": "Ringing Event Table",
+      "size_bytes": 0,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": true
+    },
+    {
+      "index": 14,
+      "name": "Network Specific Extensions Pointer",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write",
+        "SetByCreate"
+      ],
+      "mandatory": false,
+      "table": false
+    }
+  ],
+  "source": {
+    "library": "github.com/opencord/omci-lib-go/v2",
+    "version": "v2.2.4"
+  }
+}

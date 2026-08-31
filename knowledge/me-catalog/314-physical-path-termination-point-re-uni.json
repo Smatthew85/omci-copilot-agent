@@ -1,0 +1,193 @@
+{
+  "class_id": 314,
+  "name": "Physical Path Termination Point Re Uni",
+  "message_types": [
+    "Get",
+    "GetNext",
+    "Set"
+  ],
+  "attributes": [
+    {
+      "index": 0,
+      "name": "Managed Entity Id",
+      "size_bytes": 2,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 1,
+      "name": "Administrative State",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 2,
+      "name": "Operational State",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 3,
+      "name": "Arc",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 4,
+      "name": "Arc Interval",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 5,
+      "name": "Re Ani G Pointer",
+      "size_bytes": 2,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 6,
+      "name": "Total Optical Receive Signal Level Table",
+      "size_bytes": 0,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": true
+    },
+    {
+      "index": 7,
+      "name": "Per Burst Receive Signal Level Table",
+      "size_bytes": 0,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": true
+    },
+    {
+      "index": 8,
+      "name": "Lower Receive Optical Threshold",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 9,
+      "name": "Upper Receive Optical Threshold",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 10,
+      "name": "Transmit Optical Level",
+      "size_bytes": 2,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 11,
+      "name": "Lower Transmit Power Threshold",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 12,
+      "name": "Upper Transmit Power Threshold",
+      "size_bytes": 1,
+      "access": [
+        "Read",
+        "Write"
+      ],
+      "mandatory": false,
+      "table": false
+    },
+    {
+      "index": 13,
+      "name": "Additional Preamble",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 14,
+      "name": "Additional Guard Time",
+      "size_bytes": 1,
+      "access": [
+        "Read"
+      ],
+      "mandatory": true,
+      "table": false
+    },
+    {
+      "index": 15,
+      "name": "Connected Onus Table",
+      "size_bytes": 0,
+      "access": [
+        "Read"
+      ],
+      "mandatory": false,
+      "table": true
+    },
+    {
+      "index": 16,
+      "name": "Clear Onu Table",
+      "size_bytes": 0,
+      "access": [
+        "Write"
+      ],
+      "mandatory": false,
+      "table": true
+    }
+  ],
+  "source": {
+    "library": "github.com/opencord/omci-lib-go/v2",
+    "version": "v2.2.4"
+  }
+}
