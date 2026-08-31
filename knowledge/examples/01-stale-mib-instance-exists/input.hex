@@ -1,0 +1,24 @@
+# Example 01: Create MAC Bridge Service Profile — Instance Exists (0x07)
+#
+# Two-frame exchange: OLT sends Create request, ONU responds with result 0x07.
+# Hex is fabricated for illustration; CRC fields are placeholders (00000000).
+#
+# Baseline frame layout (48 bytes):
+#   [0-1]  TCID
+#   [2]    Message Type  (AR=1,AK=0 for request | AR=0,AK=1 for response; MT field)
+#   [3]    Device ID     (0x0A = baseline OMCI)
+#   [4-5]  ME Class ID
+#   [6-7]  ME Instance ID
+#   [8-39] Content       (32 bytes)
+#   [40-43] OMCI Trailer (0x0028 length + 0x0000 MIC placeholder)
+#   [44-47] CRC-32       (placeholder 00000000)
+#
+# Frame 1 — OLT->ONU: Create request (MT=10=0x0A, AR=1 -> MessageType byte = 0x4A)
+#   TCID=0x0001, DevID=0x0A, MEClass=0x002D (45), MEInst=0x0001
+#   Content: priority queue default values (all zeros for illustration)
+00014A0A002D000100000000000000000000000000000000000000000000000000000000000000000028000000000000
+#
+# Frame 2 — ONU->OLT: Create response (MT=10=0x0A, AK=1 -> MessageType byte = 0x2A)
+#   TCID=0x0001, DevID=0x0A, MEClass=0x002D (45), MEInst=0x0001
+#   Content byte 0 = 0x07 (result code: Instance Exists); remaining content zero-padded
+00012A0A002D000107000000000000000000000000000000000000000000000000000000000000000028000000000000

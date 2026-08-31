@@ -1,0 +1,51 @@
+{
+  "frames": [
+    {
+      "direction": "OLT->ONU",
+      "tcid": "0x0002",
+      "message_type": {
+        "raw": "0x48",
+        "ar": true,
+        "ak": false,
+        "mt": 8,
+        "mt_name": "Set"
+      },
+      "device_id": "0x0A",
+      "me_class_id": 171,
+      "me_class_name": "Extended VLAN Tagging Operation Configuration Data",
+      "me_instance_id": 1,
+      "attributes": {
+        "attribute_mask": "0x0200",
+        "attributes_present": [
+          {
+            "index": 7,
+            "name": "Received frame VLAN tagging operation table",
+            "raw_bytes": "0FFFEEEEFFFFFFFF0000000000000000",
+            "note": "Malformed 16-byte rule tuple: filter outer priority=0xF (reserved/invalid), TPID=0xEEEE (not a valid IEEE TPID)"
+          }
+        ]
+      },
+      "result_code": null
+    },
+    {
+      "direction": "ONU->OLT",
+      "tcid": "0x0002",
+      "message_type": {
+        "raw": "0x28",
+        "ar": false,
+        "ak": true,
+        "mt": 8,
+        "mt_name": "Set"
+      },
+      "device_id": "0x0A",
+      "me_class_id": 171,
+      "me_class_name": "Extended VLAN Tagging Operation Configuration Data",
+      "me_instance_id": 1,
+      "attributes": {
+        "failed_attribute_mask": "0x0000",
+        "unsupported_attribute_mask": "0x0000"
+      },
+      "result_code": "0x03"
+    }
+  ]
+}

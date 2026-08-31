@@ -1,0 +1,36 @@
+# Example 02: Set Extended VLAN Tagging Op Config Data — Parameter Error (0x03)
+#
+# Two-frame exchange: OLT sends Set request with a malformed 16-byte VLAN rule tuple,
+# ONU responds with result code 0x03.
+# Hex is fabricated for illustration; CRC fields are placeholders (00000000).
+#
+# Baseline frame layout (48 bytes):
+#   [0-1]  TCID
+#   [2]    Message Type  (AR/AK bits + MT)
+#   [3]    Device ID     (0x0A = baseline OMCI)
+#   [4-5]  ME Class ID
+#   [6-7]  ME Instance ID
+#   [8-9]  Attribute Mask (which attributes are being set)
+#   [10-39] Attribute values (up to 30 bytes in baseline frame)
+#   [40-43] OMCI Trailer (0x0028 + MIC placeholder)
+#   [44-47] CRC-32       (placeholder 00000000)
+#
+# ME 171 — Extended VLAN Tagging Operation Configuration Data
+#   ME Class ID: 0x00AB (171)
+#   Attribute 7 — "Received frame VLAN tagging operation table" (16-byte rule tuples)
+#   Attribute mask bit 7 (from MSB) = 0x0200 (bit 15=attr1, bit 14=attr2, ..., bit 9=attr7)
+#
+# Frame 1 — OLT->ONU: Set request (MT=8=0x08, AR=1 -> MessageType byte = 0x48)
+#   TCID=0x0002, DevID=0x0A, MEClass=0x00AB (171), MEInst=0x0001
+#   AttrMask=0x0200 (attribute 7; bit 14 of 16-bit mask = 2nd MSB = 0x0200)
+#   Rule bytes [10-25]: deliberately malformed — filter outer priority=0xF (reserved),
+#     TPID=0xEEEE (invalid), treatment outer priority byte=0xFF (out of range)
+#   NOTE: byte offsets follow Set frame layout (AttrMask at bytes 8-9, values at 10+)
+#   CRC placeholder: 00000000
+0002480A00AB000102000FFFEEEEFFFFFFFF000000000000000000000000000000000000000000000028000000000000
+#
+# Frame 2 — ONU->OLT: Set response (MT=8=0x08, AK=1 -> MessageType byte = 0x28)
+#   TCID=0x0002, DevID=0x0A, MEClass=0x00AB (171), MEInst=0x0001
+#   Content byte 0 = 0x03 (result code: Parameter Error); remaining content zero-padded
+#   CRC placeholder: 00000000
+0002280A00AB000103000000000000000000000000000000000000000000000000000000000000000028000000000000
